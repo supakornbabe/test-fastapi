@@ -16,6 +16,6 @@ app = FastAPI()
 
 app.add_middleware(CORSMiddleware, allow_origins=['*'])
 
-@app.get('/')
+@app.get('/time')
 def time():
-    return {'time':time.time()}
+    return time.time()
